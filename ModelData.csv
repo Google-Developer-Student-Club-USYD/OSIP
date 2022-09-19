@@ -1,0 +1,201 @@
+Task Type,Time of Day,Completion rate (by week),Satisfaction (by week avg),Tasks in Week,Completed (ontime)
+academic,midday,Finisher (75-100),10,25,1
+work,late night,Finisher (75-100),7,22,0
+academic,late night,Procastinator (0-50),6,2,0
+academic,late night,Finisher (75-100),2,3,0
+work,midday,Finisher (75-100),6,25,1
+day task,evening,Finisher (75-100),9,23,1
+lifestyle,late night,Finisher (75-100),7,20,1
+day task,late night,Finisher (75-100),9,7,1
+lifestyle,morning,Procastinator (0-50),3,9,1
+work,evening,Procastinator (0-50),3,20,0
+lifestyle,afternoon,Procastinator (0-50),1,23,0
+work,morning,Finisher (75-100),2,14,1
+social,late night,Just Surviving (51-74),6,20,1
+day task,afternoon,Procastinator (0-50),6,10,0
+social,midday,Just Surviving (51-74),6,2,0
+lifestyle,night,Just Surviving (51-74),10,14,1
+academic,afternoon,Procastinator (0-50),2,23,0
+social,morning,Just Surviving (51-74),3,12,0
+work,night,Procastinator (0-50),7,19,1
+lifestyle,morning,Finisher (75-100),10,22,0
+lifestyle,evening,Just Surviving (51-74),10,22,1
+lifestyle,midday,Finisher (75-100),9,23,1
+work,night,Just Surviving (51-74),10,4,0
+lifestyle,midday,Procastinator (0-50),4,17,1
+lifestyle,night,Just Surviving (51-74),1,4,1
+work,late night,Procastinator (0-50),4,22,1
+lifestyle,evening,Procastinator (0-50),4,9,1
+academic,night,Procastinator (0-50),8,17,0
+academic,late night,Just Surviving (51-74),5,15,1
+work,late night,Just Surviving (51-74),5,24,0
+lifestyle,afternoon,Procastinator (0-50),10,16,0
+day task,morning,Just Surviving (51-74),4,18,1
+lifestyle,afternoon,Just Surviving (51-74),1,16,1
+lifestyle,late night,Just Surviving (51-74),1,12,1
+lifestyle,night,Procastinator (0-50),2,3,0
+academic,night,Procastinator (0-50),9,11,0
+day task,midday,Just Surviving (51-74),5,14,1
+academic,late night,Procastinator (0-50),10,1,1
+lifestyle,afternoon,Finisher (75-100),2,14,1
+social,afternoon,Just Surviving (51-74),9,10,0
+lifestyle,midday,Procastinator (0-50),6,3,1
+social,evening,Finisher (75-100),2,21,0
+day task,morning,Just Surviving (51-74),3,10,1
+day task,midday,Just Surviving (51-74),5,8,0
+social,morning,Just Surviving (51-74),7,24,1
+academic,midday,Finisher (75-100),8,14,1
+social,late night,Just Surviving (51-74),1,2,0
+day task,midday,Procastinator (0-50),8,6,1
+academic,midday,Just Surviving (51-74),7,14,1
+day task,night,Finisher (75-100),10,4,1
+day task,night,Just Surviving (51-74),3,16,0
+day task,afternoon,Procastinator (0-50),2,23,1
+day task,afternoon,Procastinator (0-50),2,12,0
+social,afternoon,Finisher (75-100),2,5,0
+lifestyle,midday,Just Surviving (51-74),1,15,0
+work,afternoon,Just Surviving (51-74),4,20,1
+lifestyle,midday,Just Surviving (51-74),2,11,1
+academic,late night,Procastinator (0-50),4,19,1
+day task,afternoon,Finisher (75-100),8,7,1
+social,morning,Just Surviving (51-74),8,13,1
+work,midday,Just Surviving (51-74),5,16,0
+work,night,Procastinator (0-50),3,12,1
+lifestyle,late night,Procastinator (0-50),6,8,0
+academic,late night,Finisher (75-100),4,20,0
+day task,night,Just Surviving (51-74),9,5,1
+work,afternoon,Just Surviving (51-74),10,6,1
+day task,evening,Procastinator (0-50),4,11,0
+day task,midday,Just Surviving (51-74),7,20,0
+academic,midday,Just Surviving (51-74),1,12,1
+social,afternoon,Finisher (75-100),3,9,0
+social,late night,Finisher (75-100),10,5,1
+social,late night,Procastinator (0-50),8,14,0
+academic,evening,Procastinator (0-50),4,4,1
+academic,midday,Procastinator (0-50),8,19,1
+social,morning,Finisher (75-100),2,10,0
+work,evening,Finisher (75-100),5,5,0
+academic,afternoon,Just Surviving (51-74),2,3,0
+lifestyle,morning,Just Surviving (51-74),5,19,0
+lifestyle,late night,Procastinator (0-50),9,3,1
+social,afternoon,Just Surviving (51-74),4,14,1
+lifestyle,morning,Just Surviving (51-74),1,12,0
+social,morning,Finisher (75-100),7,19,0
+day task,late night,Just Surviving (51-74),5,18,0
+work,late night,Finisher (75-100),7,13,0
+day task,midday,Procastinator (0-50),6,25,0
+work,afternoon,Just Surviving (51-74),6,14,1
+academic,midday,Procastinator (0-50),6,1,0
+work,morning,Finisher (75-100),4,19,0
+day task,morning,Just Surviving (51-74),1,22,0
+social,late night,Just Surviving (51-74),10,4,0
+academic,evening,Finisher (75-100),1,9,1
+day task,evening,Procastinator (0-50),1,17,0
+social,evening,Finisher (75-100),10,11,1
+lifestyle,evening,Just Surviving (51-74),7,7,0
+social,morning,Finisher (75-100),2,22,0
+work,night,Just Surviving (51-74),8,10,1
+lifestyle,afternoon,Procastinator (0-50),4,7,1
+social,night,Finisher (75-100),1,3,0
+social,morning,Just Surviving (51-74),10,2,1
+day task,morning,Just Surviving (51-74),10,2,1
+day task,midday,Just Surviving (51-74),1,7,1
+lifestyle,night,Finisher (75-100),2,7,0
+academic,afternoon,Just Surviving (51-74),10,13,1
+day task,late night,Just Surviving (51-74),7,9,1
+lifestyle,night,Procastinator (0-50),8,1,0
+social,afternoon,Procastinator (0-50),7,24,1
+social,evening,Procastinator (0-50),10,8,1
+day task,midday,Procastinator (0-50),9,8,1
+lifestyle,afternoon,Just Surviving (51-74),2,5,0
+social,morning,Finisher (75-100),8,15,1
+work,late night,Procastinator (0-50),8,14,0
+work,evening,Just Surviving (51-74),6,18,1
+lifestyle,evening,Just Surviving (51-74),6,13,1
+work,midday,Procastinator (0-50),2,8,1
+work,afternoon,Finisher (75-100),7,4,0
+social,late night,Just Surviving (51-74),4,16,0
+social,afternoon,Finisher (75-100),1,10,0
+work,midday,Just Surviving (51-74),9,15,1
+academic,late night,Just Surviving (51-74),8,11,1
+work,midday,Procastinator (0-50),2,19,0
+day task,late night,Procastinator (0-50),6,3,0
+social,midday,Finisher (75-100),9,11,0
+lifestyle,afternoon,Just Surviving (51-74),5,19,1
+academic,morning,Finisher (75-100),5,4,0
+social,midday,Procastinator (0-50),6,11,0
+lifestyle,late night,Just Surviving (51-74),5,15,1
+work,night,Just Surviving (51-74),7,23,1
+lifestyle,late night,Finisher (75-100),9,7,0
+work,night,Just Surviving (51-74),7,23,1
+lifestyle,afternoon,Finisher (75-100),9,20,0
+social,morning,Just Surviving (51-74),8,14,1
+academic,morning,Finisher (75-100),8,17,1
+lifestyle,morning,Finisher (75-100),5,20,0
+academic,afternoon,Procastinator (0-50),8,12,1
+social,late night,Procastinator (0-50),9,12,0
+lifestyle,night,Just Surviving (51-74),6,12,0
+academic,afternoon,Finisher (75-100),10,22,1
+lifestyle,midday,Procastinator (0-50),9,3,0
+work,morning,Just Surviving (51-74),7,21,1
+social,afternoon,Just Surviving (51-74),3,20,1
+day task,morning,Procastinator (0-50),10,17,0
+work,morning,Procastinator (0-50),7,19,1
+day task,afternoon,Just Surviving (51-74),9,23,0
+social,afternoon,Procastinator (0-50),8,14,0
+social,morning,Just Surviving (51-74),8,9,1
+social,night,Finisher (75-100),1,14,0
+work,midday,Just Surviving (51-74),7,16,0
+social,morning,Procastinator (0-50),1,16,1
+day task,midday,Procastinator (0-50),3,17,1
+day task,night,Finisher (75-100),3,19,1
+day task,evening,Procastinator (0-50),6,4,1
+lifestyle,evening,Just Surviving (51-74),5,25,0
+social,midday,Procastinator (0-50),5,13,0
+work,afternoon,Finisher (75-100),9,17,1
+academic,midday,Procastinator (0-50),7,3,0
+social,night,Finisher (75-100),6,21,1
+academic,evening,Just Surviving (51-74),2,13,1
+work,morning,Just Surviving (51-74),3,15,0
+lifestyle,evening,Procastinator (0-50),1,6,0
+academic,afternoon,Finisher (75-100),8,6,1
+work,afternoon,Just Surviving (51-74),7,24,1
+work,afternoon,Procastinator (0-50),8,23,1
+work,midday,Procastinator (0-50),2,19,0
+lifestyle,morning,Just Surviving (51-74),6,6,1
+lifestyle,afternoon,Finisher (75-100),2,17,0
+social,evening,Finisher (75-100),6,22,1
+social,midday,Finisher (75-100),10,7,1
+social,late night,Finisher (75-100),10,8,1
+work,late night,Just Surviving (51-74),1,17,1
+work,night,Just Surviving (51-74),5,6,1
+day task,night,Just Surviving (51-74),1,6,0
+day task,late night,Finisher (75-100),10,14,1
+lifestyle,evening,Just Surviving (51-74),4,4,0
+social,afternoon,Just Surviving (51-74),5,15,1
+work,night,Procastinator (0-50),1,14,1
+lifestyle,late night,Procastinator (0-50),7,9,1
+lifestyle,morning,Finisher (75-100),3,11,0
+day task,morning,Procastinator (0-50),3,15,1
+lifestyle,night,Procastinator (0-50),1,9,1
+day task,afternoon,Finisher (75-100),7,21,1
+lifestyle,afternoon,Procastinator (0-50),8,24,1
+work,evening,Procastinator (0-50),4,6,0
+academic,midday,Procastinator (0-50),8,4,0
+work,afternoon,Finisher (75-100),7,24,0
+academic,evening,Finisher (75-100),5,6,1
+work,late night,Finisher (75-100),9,13,1
+work,late night,Finisher (75-100),6,12,1
+day task,morning,Procastinator (0-50),3,7,0
+academic,night,Procastinator (0-50),5,13,1
+work,morning,Just Surviving (51-74),6,11,1
+academic,late night,Finisher (75-100),3,6,1
+academic,late night,Procastinator (0-50),3,1,0
+day task,midday,Just Surviving (51-74),3,15,0
+social,evening,Just Surviving (51-74),8,4,0
+lifestyle,morning,Finisher (75-100),6,11,0
+lifestyle,afternoon,Just Surviving (51-74),8,9,0
+day task,late night,Procastinator (0-50),7,7,0
+day task,late night,Procastinator (0-50),5,4,0
+lifestyle,midday,Procastinator (0-50),4,3,1
+lifestyle,midday,Just Surviving (51-74),10,17,0
