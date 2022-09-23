@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+import { useEffect } from 'react';
+
+import { Route, Routes } from 'react-router-dom';
+
+import SignUp from './views/SignUp';
+import SignIn from './views/SignIn';
+
 import './App.css';
+
+// set page title
+export function useTitle(title) {
+	useEffect(() => {
+		const prevTitle = document.title;
+
+		document.title = title;
+		
+		return () => {
+			document.title = prevTitle
+		}
+	})
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/">
+          <Route path="sign-in" element={<SignIn />} />
+          <Route path="sign-up" element={<SignUp />} />
+        </Route>
+      </Routes>
     </div>
   );
 }
