@@ -14,12 +14,13 @@ import {
     RightView, 
     linkStyle,
     link,
-    LastLine
+    LastLine,
+    GDSCLogo
 } from './SignIn';
 import { Link } from 'react-router-dom';
 
-import appLogo from '../resources/appLogo.png';
 import googleLogo from '../resources/googleLogo.png';
+import gdscLogo from '../resources/gdscLogo.png';
 
 const fields = [
     {id: 'fname', label: 'Full Name', type: 'text', placeholder: "John Doe"},
@@ -31,6 +32,7 @@ const fields = [
 const SignUp = () => {
     return (
         <LoginUI>
+            <GDSCLogo src={gdscLogo} />
             <LeftView>
                 <Container>
                     <Title>Create an account</Title>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import appLogo from '../resources/appLogo.png';
 import googleLogo from '../resources/googleLogo.png';
+import gdscLogo from '../resources/gdscLogo.png';
 
 export const LoginUI = styled.div`
     display: flex;
@@ -117,10 +118,17 @@ const Logo = styled.img`
     margin: auto 25px;
 `;
 
+export const GDSCLogo = styled.img`
+    width: 60px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+`;
+
 export const RightView = () => {
     return (
         <RightViewContainer>
-            <Logo src={appLogo} />
+            {/* <Logo src={appLogo} /> */}
         </RightViewContainer>
     )
 };
@@ -133,6 +141,7 @@ const fields = [
 const SignIn = () => {
     return (
         <LoginUI>
+            <GDSCLogo src={gdscLogo} />
             <LeftView>
                 <Container>
                     <Title>Welcome back</Title>
