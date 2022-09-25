@@ -50,7 +50,7 @@ export const TextBox = styled.input`
     font-size: 14px;
 `;
 
-const linkStyle = {
+export const linkStyle = {
     textAlign: "right",
     fontWeight: "bold",
     color: "#141414",
@@ -92,12 +92,17 @@ export const GoogleLogo = styled.img`
     margin: 0 10px 0 0;
 `;
 
-export const EndLine = styled.span;
 
 export const link = {
     fontWeight: "bold",
     color: "#222",
+    textDecoration: "none"
 };
+
+export const LastLine = styled.p`
+    margin: 30px 0 0 0;
+    color: #777;
+`;
 
 // right view
 const RightViewContainer = styled.div`
@@ -143,6 +148,7 @@ const SignIn = () => {
                         <SignInButton>Sign in</SignInButton>
                         <GoogleSignInButton><GoogleLogo src={googleLogo} />Sign in with Google</GoogleSignInButton>
                     </Buttons>
+                    <LastLine>Don't have an account? <Link style={link} to="/sign-up">Sign up</Link></LastLine>
                 </Container>
             </LeftView>
             <RightView />
