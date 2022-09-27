@@ -9,14 +9,8 @@ import {
   signOut,
 } from "firebase/auth";
 
-import {
-  getFirestore,
-  query,
-  getDocs,
-  collection,
-  where,
-  addDoc,
-} from "firebase/firestore";
+
+import { getDatabase, ref, set, child, get } from "firebase/database";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCSDeDfCG_qUj0HrVRwYk644fh_oJ7uDgM",
@@ -24,28 +18,30 @@ const firebaseConfig = {
     projectId: "osip-ed7ae",
     storageBucket: "osip-ed7ae.appspot.com",
     messagingSenderId: "181014407051",
-    appId: "1:181014407051:web:9260ab763797ee70f8b18e"
+    appId: "1:181014407051:web:9260ab763797ee70f8b18e",
+    databaseURL: "https://osip-ed7ae-default-rtdb.asia-southeast1.firebasedatabase.app"
 };
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-const db = getFirestore(app);
 
 const googleProvider = new GoogleAuthProvider();
 const signInWithGoogle = async () => {
   try {
     const res = await signInWithPopup(auth, googleProvider);
     const user = res.user;
-    const q = query(collection(db, "users"), where("uid", "==", user.uid));
-    const docs = await getDocs(q);
-    if (docs.docs.length === 0) {
-      await addDoc(collection(db, "users"), {
-        uid: user.uid,
-        name: user.displayName,
-        authProvider: "google",
-        email: user.email,
-      });
-    }
+    const db = getDatabase();
+
+    get(child(ref(db), 'users/' + user.uid)).then((snapshot) => {
+      if (!snapshot.exists()) {
+        set(ref(db, 'users/' + user.uid), {
+          uid: user.uid,
+          name: user.displayName,
+          authProvider: "google",
+          email: user.email,
+        });
+      }
+    })
   } catch (err) {
     console.error(err);
     alert(err.message);
@@ -65,12 +61,18 @@ const registerWithEmailAndPassword = async (name, email, password) => {
   try {
     const res = await createUserWithEmailAndPassword(auth, email, password);
     const user = res.user;
-    await addDoc(collection(db, "users"), {
-      uid: user.uid,
-      name,
-      authProvider: "local",
-      email,
-    });
+    const db = getDatabase();
+
+    get(child(ref(db), 'users/' + user.uid)).then((snapshot) => {
+      if (!snapshot.exists()) {
+        set(ref(db, 'users/' + user.uid), {
+          uid: user.uid,
+          name: user.displayName,
+          authProvider: "google",
+          email: user.email,
+        });
+      }
+    })
   } catch (err) {
     console.error(err);
     alert(err.message);
@@ -93,7 +95,6 @@ const logout = () => {
 
 export {
   auth,
-  db,
   signInWithGoogle,
   logInWithEmailAndPassword,
   registerWithEmailAndPassword,
