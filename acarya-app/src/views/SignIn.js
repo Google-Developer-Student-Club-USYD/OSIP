@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import appLogo from '../resources/appLogo.png';
 import googleLogo from '../resources/googleLogo.png';
 import gdscLogo from '../resources/gdscLogo.png';
-import { signInWithGoogle, logInWithEmailAndPassword, sendPasswordReset } from '../firebase';
+import { auth, signInWithGoogle, logInWithEmailAndPassword, sendPasswordReset } from '../firebase';
 
 export const LoginUI = styled.div`
     display: flex;
@@ -146,10 +146,8 @@ const test = () => {
 }
 
 const SignIn = () => {
-    // const [email, setEmail] = useState("");
-    // const [password, setPassword] = useState("");
 
-    const signIn = (event) => {
+    const signIn = async (event) => {
         event.preventDefault();
 
         const elementsArray = [...event.target.elements];
@@ -167,10 +165,10 @@ const SignIn = () => {
             if (data.password === '') throw("Please enter a password")
             if (data.password.length < 8) throw("Your password should be at least 8 characters long")
             
-            logInWithEmailAndPassword(data.email, data.password)
-            .then((response) => {                
-                sessionStorage.setItem('Auth Token', response._tokenResponse.refreshToken);
-                sessionStorage.setItem('userId', response.user.uid);
+            await logInWithEmailAndPassword(data.email, data.password)
+            .then(() => {
+                console.log(auth.currentUser.uid);             
+                sessionStorage.setItem('userId', auth.currentUser.uid);
                 sessionStorage.setItem('userEmail', data.email);
 
                 window.location.href = "/dashboard";
