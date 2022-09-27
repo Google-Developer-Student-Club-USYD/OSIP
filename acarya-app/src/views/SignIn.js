@@ -17,7 +17,7 @@ export const LeftView = styled.div`
     display: flex;
 `;
 
-export const Container = styled.form`
+export const Form = styled.form`
     width: 65%;
     margin: auto;
 `;
@@ -148,11 +148,55 @@ const test = () => {
 const SignIn = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    const signIn = (event) => {
+        event.preventDefault();
+
+        const elementsArray = [...event.target.elements];
+
+        const data = elementsArray.reduce((acc, element) => {
+            if (element.id) {
+                acc[element.id] = element.value;
+            }
+
+            return acc;
+        }, {});
+
+        try {
+            if (data.email === '') throw("Please enter an email")
+            if (data.password === '') throw("Please enter a password")
+            if (data.password.length < 8) throw("Your password should be at least 8 characters long")
+            
+            logInWithEmailAndPassword(data.email, data.password)
+            .then((response) => {                
+                sessionStorage.setItem('Auth Token', response._tokenResponse.refreshToken);
+                sessionStorage.setItem('userId', response.user.uid);
+                sessionStorage.setItem('userEmail', data.email);
+
+                window.location.href = "/dashboard";
+            })
+            .catch((error) => {
+                if (error.message === "Firebase: Error (auth/wrong-password).") {
+                    alert("Incorrect password");
+                } else if (error.message === "Firebase: Error (auth/user-not-found).") {
+                    alert("User not found");
+                } else {
+                    alert(error.message);
+                }
+
+            })
+        }
+        catch (error) {
+            alert(error);
+        }
+
+    }
+    
     return (
         <LoginUI>
             <GDSCLogo src={gdscLogo} />
             <LeftView>
-                <Container>
+                <Form action={signIn}>
                     <Title>Welcome back</Title>
                     <Subtext>Welcome back! Please enter your details!</Subtext>
                     {fields.map(field => {
@@ -163,11 +207,11 @@ const SignIn = () => {
                         </Field>)
                     })}
                     <Buttons>
-                        <SignInButton onClick={() => {logInWithEmailAndPassword(email, password)}}>Sign in</SignInButton>
+                        <SignInButton>Sign in</SignInButton>
                         <GoogleSignInButton onClick={signInWithGoogle}><GoogleLogo src={googleLogo}/>Sign in with Google</GoogleSignInButton>
                     </Buttons>
                     <LastLine>Don't have an account? <Link style={link} to="/sign-up">Sign up</Link></LastLine>
-                </Container>
+                </Form>
             </LeftView>
             <RightView />
         </LoginUI>

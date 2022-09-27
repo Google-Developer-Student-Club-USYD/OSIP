@@ -1,7 +1,7 @@
 import { 
     LoginUI, 
     LeftView, 
-    Container, 
+    Form, 
     Title, 
     Subtext, 
     Field, 
@@ -39,7 +39,7 @@ const SignUp = () => {
         <LoginUI>
             <GDSCLogo src={gdscLogo} />
             <LeftView>
-                <Container>
+                <Form>
                     <Title>Create an account</Title>
                     <Subtext>Let's get you started! Please fill in your details!</Subtext>
                     {fields.map(field => {
@@ -54,7 +54,7 @@ const SignUp = () => {
                         <GoogleSignInButton onClick={signInWithGoogle}><GoogleLogo src={googleLogo}/>Sign up with Google</GoogleSignInButton>
                     </Buttons>
                     <LastLine>Already have an account? <Link style={link} to="/sign-in">Sign in</Link></LastLine>
-                </Container>
+                </Form>
             </LeftView>
             <RightView />
         </LoginUI>
