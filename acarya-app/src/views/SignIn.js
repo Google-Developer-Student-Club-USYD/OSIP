@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import appLogo from '../resources/appLogo.png';
 import googleLogo from '../resources/googleLogo.png';
 import gdscLogo from '../resources/gdscLogo.png';
+import { signInWithGoogle, logInWithEmailAndPassword, sendPasswordReset } from '../firebase';
 
 export const LoginUI = styled.div`
     display: flex;
@@ -75,17 +76,18 @@ export const Buttons = styled.div`
     flex-direction: column;
 `;
 
-export const SignInButton = styled.button`
+export const SignInButton = styled.div`
     ${buttonStyle}
     background: #000;
     border-color: #000;
     color: #fff;
 `;
 
-export const GoogleSignInButton = styled.button`
+export const GoogleSignInButton = styled.div`
     ${buttonStyle}
     background: #fff;
     border-color: #B4B4B4;
+    cursor: pointer;
 `;
 
 export const GoogleLogo = styled.img`
@@ -138,7 +140,14 @@ const fields = [
     {id: 'password', label: 'Password', type: 'password', placeholder: "•••••••••••••••", extra: {text: "Forgot password", link: "#"}},
 ];
 
+const test = () => {
+    console.log(fields[0])
+    console.log(fields[1])
+}
+
 const SignIn = () => {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
     return (
         <LoginUI>
             <GDSCLogo src={gdscLogo} />
@@ -149,13 +158,13 @@ const SignIn = () => {
                     {fields.map(field => {
                         return (<Field>
                             <Label>{field.label}</Label>
-                            <TextBox id={field.id} type={field.type} placeholder={field.placeholder}/>
-                            {field.extra ? <Link style={linkStyle} to={field.extra.link}>{field.extra.text}</Link> : null}
+                            <TextBox id={field.id} type={field.type} placeholder={field.placeholder} value={field.value}/>
+                            {field.extra ? <Link style={linkStyle} to={field.extra.link} onClick={() => {sendPasswordReset(email)}}>{field.extra.text}</Link> : null}
                         </Field>)
                     })}
                     <Buttons>
-                        <SignInButton>Sign in</SignInButton>
-                        <GoogleSignInButton><GoogleLogo src={googleLogo} />Sign in with Google</GoogleSignInButton>
+                        <SignInButton onClick={() => {logInWithEmailAndPassword(email, password)}}>Sign in</SignInButton>
+                        <GoogleSignInButton onClick={signInWithGoogle}><GoogleLogo src={googleLogo}/>Sign in with Google</GoogleSignInButton>
                     </Buttons>
                     <LastLine>Don't have an account? <Link style={link} to="/sign-up">Sign up</Link></LastLine>
                 </Container>

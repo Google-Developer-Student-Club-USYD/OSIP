@@ -22,6 +22,8 @@ import { Link } from 'react-router-dom';
 import googleLogo from '../resources/googleLogo.png';
 import gdscLogo from '../resources/gdscLogo.png';
 
+import { registerWithEmailAndPassword, signInWithGoogle } from '../firebase';
+
 const fields = [
     {id: 'fname', label: 'Full Name', type: 'text', placeholder: "John Doe"},
     {id: 'email', label: 'Email', type: 'email', placeholder: "john.doe11@gmail.com"},
@@ -30,6 +32,9 @@ const fields = [
 ];
 
 const SignUp = () => {
+    const [fname, setFname] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
     return (
         <LoginUI>
             <GDSCLogo src={gdscLogo} />
@@ -45,8 +50,8 @@ const SignUp = () => {
                         </Field>)
                     })}
                     <Buttons>
-                        <SignInButton>Create account</SignInButton>
-                        <GoogleSignInButton><GoogleLogo src={googleLogo} />Sign up with Google</GoogleSignInButton>
+                        <SignInButton onClick={() => {registerWithEmailAndPassword(fname, email, password)}}>Create account</SignInButton>
+                        <GoogleSignInButton onClick={signInWithGoogle}><GoogleLogo src={googleLogo}/>Sign up with Google</GoogleSignInButton>
                     </Buttons>
                     <LastLine>Already have an account? <Link style={link} to="/sign-in">Sign in</Link></LastLine>
                 </Container>
