@@ -32,9 +32,9 @@ const fields = [
 ];
 
 const SignUp = () => {
-    const [fname, setFname] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    // const [fname, setFname] = useState("");
+    // const [email, setEmail] = useState("");
+    // const [password, setPassword] = useState("");
     return (
         <LoginUI>
             <GDSCLogo src={gdscLogo} />
@@ -50,7 +50,7 @@ const SignUp = () => {
                         </Field>)
                     })}
                     <Buttons>
-                        <SignInButton onClick={() => {registerWithEmailAndPassword(fname, email, password)}}>Create account</SignInButton>
+                        {/* <SignInButton onClick={() => {registerWithEmailAndPassword(fname, email, password)}}>Create account</SignInButton> */}
                         <GoogleSignInButton onClick={signInWithGoogle}><GoogleLogo src={googleLogo}/>Sign up with Google</GoogleSignInButton>
                     </Buttons>
                     <LastLine>Already have an account? <Link style={link} to="/sign-in">Sign in</Link></LastLine>

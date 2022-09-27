@@ -76,7 +76,7 @@ export const Buttons = styled.div`
     flex-direction: column;
 `;
 
-export const SignInButton = styled.div`
+export const SignInButton = styled.button`
     ${buttonStyle}
     background: #000;
     border-color: #000;
@@ -146,8 +146,8 @@ const test = () => {
 }
 
 const SignIn = () => {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    // const [email, setEmail] = useState("");
+    // const [password, setPassword] = useState("");
 
     const signIn = (event) => {
         event.preventDefault();
@@ -196,14 +196,14 @@ const SignIn = () => {
         <LoginUI>
             <GDSCLogo src={gdscLogo} />
             <LeftView>
-                <Form action={signIn}>
+                <Form onSubmit={signIn}>
                     <Title>Welcome back</Title>
                     <Subtext>Welcome back! Please enter your details!</Subtext>
                     {fields.map(field => {
                         return (<Field>
                             <Label>{field.label}</Label>
                             <TextBox id={field.id} type={field.type} placeholder={field.placeholder} value={field.value}/>
-                            {field.extra ? <Link style={linkStyle} to={field.extra.link} onClick={() => {sendPasswordReset(email)}}>{field.extra.text}</Link> : null}
+                            {field.extra ? <Link style={linkStyle} to={field.extra.link}>{field.extra.text}</Link> : null}
                         </Field>)
                     })}
                     <Buttons>
